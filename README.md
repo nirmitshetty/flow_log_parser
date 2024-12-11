@@ -4,7 +4,7 @@ This program parses a flow log file, matching each row with a tag based on a loo
 - port/protocol combination counts
 
 ## Files
-1. Flow log file: Sample files are present in `tests` directory.
+1. Flow log file: Sample files are present in `test` directory.
 2. Lookup table file: Default lookup table is `lookup_table.txt` in input directory. Can be changed in `config.py`. 
 3. Output file: File is generated in `output` directory and format is `output_<flow log filepath>.txt`.
 
@@ -36,7 +36,7 @@ This program parses a flow log file, matching each row with a tag based on a loo
 Use the following Python command to run the program:
 ```
 python flow_log_parser.py <flow_log_filepath>
-e.g.: python flow_log_parser.py tests/sample_1.txt 
+e.g.: python flow_log_parser.py test/sample_1.txt 
 ```
 
 ## Testing
