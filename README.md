@@ -4,12 +4,13 @@ This program parses a flow log file, matching each row with a tag based on a loo
 - port/protocol combination counts
 
 ## Files
-1. Flow log file: space delimited text file with flow log records. Sample files are present in `tests` directory.
-2. Lookup table file: space delimited text file with mappings. Default lookup table is `lookup_table.txt` in input directory. Can be changed in `config.py`. 
-3. Output file: text file with tagged flow log records based on lookup table. File is generated in `output` directory and format is `output_<flow log filepath>.txt`.
+1. Flow log file: Sample files are present in `tests` directory.
+2. Lookup table file: Default lookup table is `lookup_table.txt` in input directory. Can be changed in `config.py`. 
+3. Output file: File is generated in `output` directory and format is `output_<flow log filepath>.txt`.
 
 ## Assumptions
 1. Lookup table
+   - Space delimited text file
    - Only consider rows with at least 3 fields
    - All fields are valid
    - One port,protocol combination maps to one tag
@@ -18,6 +19,7 @@ This program parses a flow log file, matching each row with a tag based on a loo
 2. Protocol number mapping
    - Pre-defined hashmap with protocol number to names mapped. Defined in `config.py`
 3. Flow logs
+   - Space delimited text file
    - Only consider rows with at least `14` fields
    - Only consider rows with version `2`
    - Only consider rows with action `ACCEPT`
@@ -26,6 +28,7 @@ This program parses a flow log file, matching each row with a tag based on a loo
    - Remaining fields are valid
    - Matching is case-insensitive
 4. Output
+   - Text file
    - No strict ordering of rows
 
 ## Example Usage
