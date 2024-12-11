@@ -10,21 +10,23 @@ This program parses a flow log file, matching each row with a tag based on a loo
 
 ## Assumptions
 1. Lookup table
-  - Only consider rows with at least 3 fields
-  - All fields are valid
-  - One port,protocol combination maps to one tag
-  - One tag can map to one or more (port,protocol) combinations
-  - Unmapped (port,protocol) combinations are tagged as 'Untagged'
+   - Only consider rows with at least 3 fields
+   - All fields are valid
+   - One port,protocol combination maps to one tag
+   - One tag can map to one or more (port,protocol) combinations
+   - Unmapped (port,protocol) combinations are tagged as 'Untagged'
 2. Protocol number mapping
-  - Pre-defined hashmap with protocol number to names mapped. Defined in `config.py`
+   - Pre-defined hashmap with protocol number to names mapped. Defined in `config.py`
 3. Flow logs
-  - Only consider rows with at least `14` fields
-  - Only consider rows with version `2`
-  - Only consider rows with action `ACCEPT`
-  - Only consider rows with log-status `OK` 
-  - Only consider rows with protocol numbers that are pre-defined in the mapping
-  - Remaining fields are valid
-  - Matching is case-insensitive
+   - Only consider rows with at least `14` fields
+   - Only consider rows with version `2`
+   - Only consider rows with action `ACCEPT`
+   - Only consider rows with log-status `OK` 
+   - Only consider rows with protocol numbers that are pre-defined in the mapping
+   - Remaining fields are valid
+   - Matching is case-insensitive
+4. Output
+   - No strict ordering of rows
 
 ## Example Usage
 **Python Version**: 3.9 or higher.
