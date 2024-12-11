@@ -1,7 +1,7 @@
 # Flow log parser
 This program parses a flow log file, matching each row with a tag based on a lookup table, and generates an output file containing:
 - tag counts
-- port/protocol combination counts
+- (dstport,protocol) combination counts
 
 ## Files
 1. Flow log file: Sample files are present in `test` directory.
