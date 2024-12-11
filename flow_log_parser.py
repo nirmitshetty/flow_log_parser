@@ -1,7 +1,6 @@
 import argparse
 import os
 import sys
-import time
 from collections import Counter
 
 from config import protocol_map, lookup_table_path
